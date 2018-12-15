@@ -9,9 +9,6 @@ namespace PPPK_MVC.Models
     {
         public int ID { get; set; }
         public string Tip { get; set; }
-        public TipVozilaModel()
-        {
-
-        }
+        
     }
 }

@@ -5,7 +5,7 @@ using System.Web;
 
 namespace PPPK_MVC.DAL
 {
-    public class RepoFactory
+    public static class RepoFactory
     {
         public static IRepo GetRepo()
         {

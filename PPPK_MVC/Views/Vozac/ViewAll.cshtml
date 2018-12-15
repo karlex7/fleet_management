@@ -1,0 +1,51 @@
+﻿@model IEnumerable<PPPK_MVC.Models.VozacModel>
+
+@{
+    ViewBag.Title = "ViewAll";
+}
+
+<h2>ViewAll</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Ime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Prezime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BrojMobitela)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BrojVozacke)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Prezime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BrojMobitela)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BrojVozacke)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
